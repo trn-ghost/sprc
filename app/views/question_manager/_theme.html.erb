@@ -1,0 +1,14 @@
+<div class="theme entry" id="db<%=theme.id%>">
+    <div class="title">
+        <i class="dropdown icon"></i>
+        <span><%==theme.theme%></span>
+    </div>
+    <div class="content">
+        <div class="mgmt">
+            <%= image_tag 'icons/edit.png', alt: 'редактировать', title: 'редактровать', class: 'edit', onclick: 'SPRC.showThemeWindow(this)' %>
+            <%= image_tag 'icons/delete.png', alt: 'удалить', title: 'удалить', class: 'delete', onclick: 'SPRC.promt(function(){SPRC.delItem(event)})' %>
+        </div>
+        <p><%==theme.description%></p>
+        <p class="inner">Заглушка</p>
+    </div>
+</div>

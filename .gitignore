@@ -15,4 +15,9 @@
 /log/*
 !/log/.keep
 /tmp
+
 /config/database.yml
+/gemfile.lock
+/bin/*
+/.idea
+/.work

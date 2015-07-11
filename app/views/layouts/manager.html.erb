@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SPRC management page</title>
+    <%= stylesheet_link_tag    'management', media: 'all'%>
+    <%= javascript_include_tag 'management' %>
+    <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="ui fixed main menu inverted">
+    <div class="container">
+        <div class="title item">Страница администратора</div>
+    </div>
+</div>
+
+<div class="pusher">
+    <div class="header">
+        <div class="container">
+            <h1 class="ui">Список вопросов</h1>
+            <p>Воспользуйтесь кнопкой ниже, чтобы добавить тему вопроса</p>
+            <div class="ui divider"></div>
+            <div class="ui primary button" onclick="SPRC.showThemeWindow()">Добавить тему</div>
+        </div>
+    </div>
+</div>
+<div class="main container">
+    <div class="ui accordion">
+        <%= render partial: 'question_manager/theme', collection: @themes %>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>

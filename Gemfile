@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.0'
+gem 'rails', '4.2.3'
 
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3', '1.3.9'
@@ -47,6 +47,12 @@ gem 'capistrano', group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass'
+gem 'semantic-ui-sass' #, github: 'doabit/semantic-ui-sass'
 gem 'json', '1.8.1'
 gem 'bcrypt'
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'capybara-webkit'
+end

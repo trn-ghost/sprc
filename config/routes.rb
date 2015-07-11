@@ -53,4 +53,10 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  get '/admin' => 'question_manager#index'
+  #get '/admin/themes/:id' => 'question_manager#show_theme'
+  post '/admin/themes' => 'question_manager#add_theme'
+  patch '/admin/themes' => 'question_manager#edit_theme'
+  delete '/admin/theme' => 'question_manager#del_theme'
 end
